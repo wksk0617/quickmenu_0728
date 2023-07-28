@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+    <style>
+        .fixed{position: fixed}
+        .d-flex{display: flex}
+        #quick{
+            right:20px;
+            bottom: 0;
+            width: 50px;
+        }
+        #quick ul{   /* 왼쪽으로 늘어나게 해줌*/
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        } 
+        #quick ul>li{
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            margin: 10px 0;
+            transition: 0.5s;
+        }
+        #quick ul>li:hover{
+            width:120px;
+        }
+        #quick ul>li>a{
+            width: 120px;
+            /* justify-content: space-between;  */
+
+            align-items: center;
+            
+        }
+        
+        #quick ul>li>a>i{
+            display: block;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        #quick ul>li>a.d-flex>i+span{
+            white-space: nowrap;
+        }
+        button#top{
+            background-color: transparent;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+<body>
+    <div id="quick" class="fixed"> 
+        <ul>
+            <li><a href="" class="d-flex"><i class="bi bi-instagram"></i><span>인스타</span></a></li>
+            <li><a href="" class="d-flex"><i class="bi bi-facebook"></i><span>페북</span></a></li>
+            <li><a href="" class="d-flex"><i class="bi bi-youtube"></i><span>유튜브</span></a></li>
+            <li><a href="" class="d-flex"><i class="bi bi-android2"></i><span>아무거나</span></a></li>
+        </ul>
+        <button id="top"><i class="bi bi-arrow-bar-up"></i></button>
+    </div>
+</body>
+</html>
